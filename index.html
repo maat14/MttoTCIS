@@ -8,8 +8,8 @@
         body {
             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/709/646/small/modern-dark-blue-geometric-diagonal-lines-gradient-background-free-photo.jpg');
             background-size: cover;
-            font-family: 'Times New Roman', serif;
-            color: #f5fffa;
+            font-family: 'Times New Roman',serif; /* Cambiado a Arial, puedes cambiar a la fuente que prefieras */
+            color: #000;
             text-align: center;
             padding: 50px;
         }
@@ -28,11 +28,26 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+
+        .animated-figure {
+            width: 100px; /* Ajusta el tamaño de la figura según tus necesidades */
+            height: 100px; /* Ajusta el tamaño de la figura según tus necesidades */
+            background-color: #ff4500;
+            position: relative;
+            animation: moveFigure 2s infinite alternate; /* Agregado animación */
+        }
+
+        @keyframes moveFigure {
+            to {
+                transform: translateX(200px); /* Ajusta la distancia de movimiento */
+            }
+        }
     </style>
 </head>
 <body>
     <div id="content">
         <h1>BASE DE DATOS</h1>
+        <div class="animated-figure"></div> <!-- Agregado elemento de animación -->
         <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento1.pdf" class="boton-descarga">Descargar Documento 1</a></p>
         <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento2.pdf" class="boton-descarga">Descargar Documento 2</a></p>
         <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento3.pdf" class="boton-descarga">Descargar Documento 3</a></p>
