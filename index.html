@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>Mantenimiento TCIS</title>
     <style>
         body {
@@ -30,9 +33,9 @@
         }
 
         .animated-figure {
-            width: 125px; /* Ajusta el tamaño de la figura según tus necesidades */
-            height: 125px; /* Ajusta el tamaño de la figura según tus necesidades */
-            background-image: url('https://i.pinimg.com/originals/f2/60/0a/f2600a1ab6f7fd20cc33a5dbbbab5335.jpg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen */
+            width: 125px;
+            height: 125px;
+            background-image: url('https://i.pinimg.com/originals/f2/60/0a/f2600a1ab6f7fd20cc33a5dbbbab5335.jpg');
             background-size: cover;
             position: relative;
             animation: moveFigure 2s infinite alternate;
@@ -44,15 +47,37 @@
             }
         }
     </style>
+    <script>
+        // Función de autenticación simple
+        function autenticar() {
+            var nombreUsuario = prompt("Ingrese su nombre de usuario:");
+            var contraseña = prompt("Ingrese su contraseña:");
+
+            // Verificación de credenciales (deberías comparar con credenciales reales)
+            if (nombreUsuario === "a3093445" && contraseña === "manifold1") {
+                alert("Acceso concedido. Redirigiendo...");
+                // Redireccionar o mostrar contenido, según sea necesario
+            } else {
+                alert("Credenciales incorrectas. Acceso denegado.");
+                // Puedes agregar más lógica aquí, como bloquear el acceso después de varios intentos incorrectos
+                window.location.href = "https://www.ejemplo.com/pagina-de-error.html"; // Redirigir a una página de error
+            }
+        }
+
+        // Llamada a la función de autenticación al cargar la página
+        window.onload = autenticar;
+    </script>
 </head>
+
 <body>
     <div id="content">
         <h1>BASE DE DATOS</h1>
         <div class="animated-figure"></div>
-        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento1.pdf" class="boton-descarga">Descargar Documento 1</a></p>
-        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento2.pdf" class="boton-descarga">Descargar Documento 2</a></p>
-        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento3.pdf" class="boton-descarga">Descargar Documento 3</a></p>
-        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento4.pdf" class="boton-descarga">Descargar Documento 4</a></p>
+        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento1.pdf" class="boton-descarga" rel="noopener noreferrer" download>Descargar Documento 1</a></p>
+        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento2.pdf" class="boton-descarga" rel="noopener noreferrer" download>Descargar Documento 2</a></p>
+        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento3.pdf" class="boton-descarga" rel="noopener noreferrer" download>Descargar Documento 3</a></p>
+        <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento4.pdf" class="boton-descarga" rel="noopener noreferrer" download>Descargar Documento 4</a></p>
     </div>
 </body>
+
 </html>
