@@ -47,26 +47,6 @@
             }
         }
     </style>
-    <script>
-        // Función de autenticación simple
-        function autenticar() {
-            var nombreUsuario = prompt("Ingrese su nombre de usuario:");
-            var contraseña = prompt("Ingrese su contraseña:");
-
-            // Verificación de credenciales (deberías comparar con credenciales reales)
-            if (nombreUsuario === "a3093445" && contraseña === "manifold1") {
-                alert("Acceso concedido. Redirigiendo...");
-                // Redireccionar o mostrar contenido, según sea necesario
-            } else {
-                alert("Credenciales incorrectas. Acceso denegado.");
-                // Puedes agregar más lógica aquí, como bloquear el acceso después de varios intentos incorrectos
-                window.location.href = "https://www.ejemplo.com/pagina-de-error.html"; // Redirigir a una página de error
-            }
-        }
-
-        // Llamada a la función de autenticación al cargar la página
-        window.onload = autenticar;
-    </script>
 </head>
 
 <body>
