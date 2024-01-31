@@ -12,37 +12,25 @@
             color: #f00;
             text-align: center;
             padding: 50px;
-            display: none; /* Ocultar el contenido principal inicialmente */
         }
 
-        #login-container {
-            max-width: 300px;
+        #content {
+            max-width: 600px;
             margin: 50px auto;
         }
 
-        #password-input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        #login-button {
+        .boton-descarga {
+            display: inline-block;
             padding: 10px 20px;
             background-color: #28a745;
             color: #fff;
-            border: none;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="login-container">
-        <h1>Ingresa la contraseña</h1>
-        <input type="password" id="password-input" placeholder="Contraseña">
-        <button id="login-button" onclick="checkPassword()">Ingresar</button>
-    </div>
-
     <div id="content">
         <h1>BASE DE DATOS</h1>
         <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento1.pdf" class="boton-descarga">Descargar Documento 1</a></p>
@@ -50,19 +38,5 @@
         <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento3.pdf" class="boton-descarga">Descargar Documento 3</a></p>
         <p>DALE CLICK AL SIGUIENTE ENLACE PARA DESCARGAR UN DOCUMENTO DE-... <a href="documento4.pdf" class="boton-descarga">Descargar Documento 4</a></p>
     </div>
-
-    <script>
-        function checkPassword() {
-            var enteredPassword = document.getElementById('password-input').value;
-
-            // Reemplaza 'tu-contraseña' con la contraseña real que desees utilizar
-            if (enteredPassword === 'manifold_159') {
-                document.getElementById('login-container').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-            } else {
-                alert('Contraseña incorrecta. Intenta de nuevo.');
-            }
-        }
-    </script>
 </body>
 </html>
